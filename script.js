@@ -20,38 +20,50 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   // Part 1
   function shortenPageTitle() {
-
+    const mainTitle = document.getElementById('main-title');
+    console.log('this is the maintitle', mainTitle);
+    mainTitle.innerText = "Dom Toretto's Homepage!"
   }
+  shortenPageTitle();
 
 
   // Part 2
   function changeBodyBgColor() {
-
+    var mainBody = document.querySelector('body');
+    mainBody.style.backgroundColor = 'pink'
   }
-
+  changeBodyBgColor();
 
   // Part 3
   function removeLastFavoriteThing() {
-
+    var favs = document.getElementById('favorite-things');
+    favs.lastElementChild.remove();
   }
-
+  removeLastFavoriteThing();
 
   // Part 4
   function makeSpecialTitlesBigger() {
-
+    var specialTitle = document.querySelectorAll('.special-title');
+    specialTitle[0].style.fontSize = '2rem';
+    specialTitle[1].style.fontSize = '2rem';
   }
-
+  makeSpecialTitlesBigger();
 
   // Part 5
   function RemoveChicagoRace() {
-
+    var pastRaces = document.getElementById('past-races');
+    pastRaces.removeChild(pastRaces.childNodes[7]);  
   }
+  RemoveChicagoRace();
 
   // Part 6
   function addPastRace() {
-
+    var ul = document.getElementById("past-races");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode("New York"));
+    ul.appendChild(li);
   }
-
+  addPastRace();
 
   // Part 7
   function createNewBlogPost() {
